@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gallery - Ireneo Kunda Complex, Wau, South Sudan">
+    <title>Gallery - Ireneo Kunda Complex</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <img src="images/logo/logo.png" alt="Ireneo Kunda Complex Logo" class="logo-img">
+                </div>
+                <button class="mobile-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="announcements.html">Announcements</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-cta">
+                    <a href="admissions.html" class="btn btn-primary">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Photo Gallery</h1>
+            <p>A glimpse into life at Ireneo Kunda Complex</p>
+        </div>
+    </section>
+
+    <!-- Gallery Filter -->
+    <section class="gallery-filter">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Photos</button>
+                <button class="filter-btn" data-filter="campus">Campus</button>
+                <button class="filter-btn" data-filter="classroom">Classroom</button>
+                <button class="filter-btn" data-filter="activities">Activities</button>
+                <button class="filter-btn" data-filter="events">Events</button>
+                <button class="filter-btn" data-filter="sports">Sports</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-section">
+        <div class="container">
+            <div id="galleryGrid" class="gallery-grid">
+                <!-- Photos will be loaded here -->
+                <!-- Placeholder items -->
+                <div class="gallery-item" data-category="campus">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-school"></i>
+                        <p>School Building</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="classroom">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <p>Classroom Learning</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="activities">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-users"></i>
+                        <p>Group Activities</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="events">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-calendar-star"></i>
+                        <p>School Events</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="sports">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-running"></i>
+                        <p>Sports Activities</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="campus">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-book"></i>
+                        <p>Library</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="classroom">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-flask"></i>
+                        <p>Science Lab</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="activities">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-paint-brush"></i>
+                        <p>Arts & Crafts</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="events">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-graduation-cap"></i>
+                        <p>Graduation Ceremony</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="sports">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-futbol"></i>
+                        <p>Football Match</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="campus">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-desktop"></i>
+                        <p>Computer Lab</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="activities">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-music"></i>
+                        <p>Music Class</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upload Instructions -->
+    <section class="upload-info">
+        <div class="container">
+            <div class="info-box">
+                <i class="fas fa-info-circle"></i>
+                <div>
+                    <h3>Add Photos to Gallery</h3>
+                    <p>To add photos to this gallery, place your images in the <code>images/gallery/</code> folder and update the <code>data/gallery.json</code> file with photo information.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Modal -->
+    <div id="galleryModal" class="gallery-modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modalImage" alt="Gallery image">
+        <div class="modal-caption" id="modalCaption"></div>
+        <button class="modal-nav modal-prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="modal-nav modal-next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Ireneo Kunda Complex</h3>
+                    <p>Providing quality education in Wau, South Sudan since our establishment.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Wau, South Sudan</li>
+                        <li><i class="fas fa-phone"></i> +211910185396</li>
+                        <li><i class="fas fa-envelope"></i> cletokunda@yahoo.com</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ireneo Kunda Complex. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>
